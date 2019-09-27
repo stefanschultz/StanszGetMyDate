@@ -1,0 +1,25 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.open-sans-font{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.stansz-linktext-blue {
+  color: rgb(0, 57, 128);
+
+  &:hover {
+    color: rgb(185, 0, 51);
+  }
+}
+
+/*
+ *
+ * Texts
+ *
+ */
+
+.stansz-text-blue {
+  color: rgba(0, 57, 128, 1.0);
+}

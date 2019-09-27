@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+/* Fonts */
+@import "~npm-font-open-sans/open-sans.css";
+@import "~@fortawesome/fontawesome-free/css/fontawesome.min.css";
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+@import 'assets/styles/variables.scss';
+@import 'assets/styles/custom-styles.scss';
