@@ -1,0 +1,32 @@
+.stansz-day-number-square-headertitlebox {
+  width: 12vh;
+  height: 4vh;
+  background-color: rgba(225, 225, 225, 1.0);
+  color: rgba(0, 57, 128, 1.0);
+  font-size: 1.75vh;
+  font-weight: bold;
+  letter-spacing: 0.0em;
+  position: relative;
+}
+
+.stansz-day-number-square {
+  width: 12vh;
+  height: 12vh;
+  background-color: rgba(0, 57, 128, 1.0);
+  color: white;
+  font-size: 2.75vh;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  position: relative;
+}
+
+.stansz-day-number-square-today {
+  width: 12vh;
+  height: 12vh;
+  background-color: rgba(255, 51, 0, 1.0);
+  color: white;
+  font-size: 2.75vh;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  position: relative;
+}

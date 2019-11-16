@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'stansz-component-datetime-day',
@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./stansz-component-datetime-day.component.scss']
 })
 export class StanszComponentDatetimeDayComponent implements OnInit {
+
+  @Input() dayNumber:string;
+  @Input() dayName:string;
+  @Input() isToday:boolean = false;
 
   constructor() { }
 

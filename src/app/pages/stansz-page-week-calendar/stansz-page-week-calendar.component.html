@@ -1,0 +1,130 @@
+<div class="container-fluid mt-5">
+
+  <!-- Previous week -->
+  <div class="row">
+      <div class="col-1">
+        <div class="stansz-position-center">
+          <button type="button" style="border:none; background:none;" (click)="onClickGoBackwardWeeks(1)">
+            <fa-icon [icon]="faChevronCircleUp" class="stansz-text-link-blue" style="font-size:7.0vh"></fa-icon>
+          </button>
+        </div>
+      </div>
+      <div class="col-10" style="opacity:50%">
+        <div class="mr-1" style="float:left">
+          <stansz-component-datetime-year yearNumber="{{ getYearOfPreviousWeek() }}"></stansz-component-datetime-year>
+        </div>
+        <div class="mr-1" style="float:left">
+          <stansz-component-datetime-week weekNumber="{{ getWeekNumberOfPreviousWeek() }}"></stansz-component-datetime-week>
+        </div>
+        <div class="mr-1" style="float:left">
+          <stansz-component-datetime-day dayNumber="{{ dayNumbersPreviousWeek['monday'] }}" dayName="Monday" [isToday]="false"></stansz-component-datetime-day>
+        </div>
+        <div class="mr-1" style="float:left">
+          <stansz-component-datetime-day dayNumber="{{ dayNumbersPreviousWeek['tuesday'] }}" dayName="Tuesday" [isToday]="false"></stansz-component-datetime-day>
+        </div>
+        <div class="mr-1" style="float:left">
+          <stansz-component-datetime-day dayNumber="{{ dayNumbersPreviousWeek['wednesday'] }}" dayName="Wednesday" [isToday]="false"></stansz-component-datetime-day>
+        </div>
+        <div class="mr-1" style="float:left">
+          <stansz-component-datetime-day dayNumber="{{ dayNumbersPreviousWeek['thursday'] }}" dayName="Thursday" [isToday]="false"></stansz-component-datetime-day>
+        </div>
+        <div class="mr-1" style="float:left">
+          <stansz-component-datetime-day dayNumber="{{ dayNumbersPreviousWeek['friday'] }}" dayName="Friday" [isToday]="false"></stansz-component-datetime-day>
+        </div>
+        <div class="mr-1" style="float:left">
+          <stansz-component-datetime-day dayNumber="{{ dayNumbersPreviousWeek['saturday'] }}" dayName="Saturday" [isToday]="false"></stansz-component-datetime-day>
+        </div>
+        <div class="mr-1" style="float:left">
+          <stansz-component-datetime-day dayNumber="{{ dayNumbersPreviousWeek['sunday'] }}" dayName="Sunday" [isToday]="false"></stansz-component-datetime-day>
+        </div>
+      </div>
+      <div class="col-1" style="border: 1px solid magenta"></div>
+  </div>
+
+  <!-- Current week -->
+  <div class="row my-3">
+    <div class="col-1">
+      <div class="stansz-position-center">
+        <button type="button" style="border:none; background:none;" (click)="onClickReloadToCurrentWeek()">
+          <fa-icon [icon]="faSyncAlt" class="stansz-text-link-blue" style="font-size:7.0vh"></fa-icon>
+        </button>
+      </div>
+    </div>
+    <div class="col-10">
+      <div class="mr-1" style="float:left">
+        <stansz-component-datetime-year yearNumber="{{ getYearOfCurrentWeek() }}"></stansz-component-datetime-year>
+      </div>
+      <div class="mr-1" style="float:left">
+        <stansz-component-datetime-week weekNumber="{{ getWeekNumberOfCurrentWeek() }}"></stansz-component-datetime-week>
+      </div>
+      <div class="mr-1" style="float:left">
+        <stansz-component-datetime-day dayNumber="{{ dayNumbersCurrentWeek['monday'] }}" dayName="Monday" [isToday]="isTodayMonday()"></stansz-component-datetime-day>
+      </div>
+      <div class="mr-1" style="float:left">
+        <stansz-component-datetime-day dayNumber="{{ dayNumbersCurrentWeek['tuesday'] }}" dayName="Tuesday" [isToday]="isTodayTuesday()"></stansz-component-datetime-day>
+      </div>
+      <div class="mr-1" style="float:left">
+        <stansz-component-datetime-day dayNumber="{{ dayNumbersCurrentWeek['wednesday'] }}" dayName="Wednesday" [isToday]="isTodayWednesday()"></stansz-component-datetime-day>
+      </div>
+      <div class="mr-1" style="float:left">
+        <stansz-component-datetime-day dayNumber="{{ dayNumbersCurrentWeek['thursday'] }}" dayName="Thursday" [isToday]="isTodayThursday()"></stansz-component-datetime-day>
+      </div>
+      <div class="mr-1" style="float:left">
+        <stansz-component-datetime-day dayNumber="{{ dayNumbersCurrentWeek['friday'] }}" dayName="Friday" [isToday]="isTodayFriday()"></stansz-component-datetime-day>
+      </div>
+      <div class="mr-1" style="float:left">
+        <stansz-component-datetime-day dayNumber="{{ dayNumbersCurrentWeek['saturday'] }}" dayName="Saturday" [isToday]="isTodaySaturday()"></stansz-component-datetime-day>
+      </div>
+      <div class="mr-1" style="float:left">
+        <stansz-component-datetime-day dayNumber="{{ dayNumbersCurrentWeek['sunday'] }}" dayName="Sunday" [isToday]="isTodaySunday()"></stansz-component-datetime-day>
+      </div>
+    </div>
+    <div class="col-1" style="border: 1px solid magenta"></div>
+  </div>
+
+  <!-- Next week -->
+  <div class="row">
+    <div class="col-1">
+      <div class="stansz-position-center">
+        <button type="button" style="border:none; background:none;" (click)="onCLickGoForwardWeeks(1)">
+          <fa-icon [icon]="faChevronCircleDown" style="font-size:7.0vh" class="stansz-text-link-blue"></fa-icon>
+        </button>
+      </div>
+    </div>
+    <div class="col-10" style="opacity:50%">
+      <div class="mr-1" style="float:left">
+        <stansz-component-datetime-year yearNumber="{{ getYearOfNextWeek() }}"></stansz-component-datetime-year>
+      </div>
+      <div class="mr-1" style="float:left">
+        <stansz-component-datetime-week weekNumber="{{ getWeekNumberOfNextWeek() }}"></stansz-component-datetime-week>
+      </div>
+      <div class="mr-1" style="float:left">
+        <stansz-component-datetime-day dayNumber="{{ dayNumbersNextWeek['monday'] }}" dayName="Monday" [isToday]="false"></stansz-component-datetime-day>
+      </div>
+      <div class="mr-1" style="float:left">
+        <stansz-component-datetime-day dayNumber="{{ dayNumbersNextWeek['tuesday'] }}" dayName="Tuesday" [isToday]="false"></stansz-component-datetime-day>
+      </div>
+      <div class="mr-1" style="float:left">
+        <stansz-component-datetime-day dayNumber="{{ dayNumbersNextWeek['wednesday'] }}" dayName="Wednesday" [isToday]="false"></stansz-component-datetime-day>
+      </div>
+      <div class="mr-1" style="float:left">
+        <stansz-component-datetime-day dayNumber="{{ dayNumbersNextWeek['thursday'] }}" dayName="Thursday" [isToday]="false"></stansz-component-datetime-day>
+      </div>
+      <div class="mr-1" style="float:left">
+        <stansz-component-datetime-day dayNumber="{{ dayNumbersNextWeek['friday'] }}" dayName="Friday" [isToday]="false"></stansz-component-datetime-day>
+      </div>
+      <div class="mr-1" style="float:left">
+        <stansz-component-datetime-day dayNumber="{{ dayNumbersNextWeek['saturday'] }}" dayName="Saturday" [isToday]="false"></stansz-component-datetime-day>
+      </div>
+      <div class="mr-1" style="float:left">
+        <stansz-component-datetime-day dayNumber="{{ dayNumbersNextWeek['sunday'] }}" dayName="Sunday" [isToday]="false"></stansz-component-datetime-day>
+      </div>
+    </div>
+    <div class="col-1" style="border: 1px solid magenta"></div>
+  </div>
+
+</div>
+
+<!-- <stansz-component-datetime-year></stansz-component-datetime-year> -->
+<!-- <stansz-component-datetime-month></stansz-component-datetime-month> -->
+<!-- <stansz-component-datetime-day></stansz-component-datetime-day> -->

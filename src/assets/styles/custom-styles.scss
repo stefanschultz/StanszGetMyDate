@@ -16,10 +16,83 @@ body {
 
 /*
  *
- * Texts
+ * Background color
+ *
+ */
+
+ .stansz-backgroundcolor-blue {
+  background-color: rgba(0, 57, 128, 1.0);
+}
+
+
+/*
+ *
+ * Texts, Links, ...
  *
  */
 
 .stansz-text-blue {
   color: rgba(0, 57, 128, 1.0);
+}
+
+.stansz-text-link-blue {
+  color: rgba(0, 57, 128, 1.0);
+}
+.stansz-text-link-blue:hover {
+  color: rgb(204, 51, 51);
+}
+.stansz-text-link-blue:focus {
+  color: rgb(204, 51, 51);
+}
+.stansz-text-link-blue:active {
+  color: rgba(255, 51, 0, 1.0);
+}
+
+/*
+ *
+ * Texts
+ *
+ */
+
+ .stansz-position-center {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin-right: -50%;
+   transform: translate(-50%, -50%)
+ }
+
+/* .stansz-position-center-2 {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+} */
+
+
+/*
+ *
+ * Transforms
+ *
+ */
+
+.stansz-rotate-minus-90 {
+
+  transform: rotate(-90deg);
+
+  /* Legacy vendor prefixes that you probably don't need... */
+
+  /* Safari */
+  -webkit-transform: rotate(-90deg);
+
+  /* Firefox */
+  -moz-transform: rotate(-90deg);
+
+  /* IE */
+  -ms-transform: rotate(-90deg);
+
+  /* Opera */
+  -o-transform: rotate(-90deg);
+
+  /* Internet Explorer */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }

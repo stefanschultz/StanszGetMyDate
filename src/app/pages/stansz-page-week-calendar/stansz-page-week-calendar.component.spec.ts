@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StanszPageCalendarComponent } from './stansz-page-calendar.component';
+import { StanszPageWeekCalendarComponent } from './stansz-page-week-calendar.component';
 
 describe('StanszPageCalendarComponent', () => {
-  let component: StanszPageCalendarComponent;
-  let fixture: ComponentFixture<StanszPageCalendarComponent>;
+  let component: StanszPageWeekCalendarComponent;
+  let fixture: ComponentFixture<StanszPageWeekCalendarComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StanszPageCalendarComponent ]
+      declarations: [ StanszPageWeekCalendarComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StanszPageCalendarComponent);
+    fixture = TestBed.createComponent(StanszPageWeekCalendarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

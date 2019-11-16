@@ -1,1 +1,6 @@
-<p>5</p>
+<div class="stansz-day-number-square-headertitlebox">
+  <div class="stansz-position-center">{{ dayName}}</div>
+</div>
+<div [ngClass]="(isToday === true) ? 'stansz-day-number-square-today' : 'stansz-day-number-square'">
+  <div class="stansz-position-center">{{ dayNumber }}</div>
+</div>
